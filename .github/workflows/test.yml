@@ -1,0 +1,20 @@
+name: Run PowerShell Script on Windows 10
+
+on:
+  push:
+    branches:
+      - main  # Adjust this to your main branch
+
+jobs:
+  build:
+    runs-on: windows-latest  # You can specify a different version if needed
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Run PowerShell Script
+      shell: pwsh
+      run: |
+        Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+        .\"test.ps1"
