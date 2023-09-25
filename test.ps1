@@ -53,3 +53,4 @@ Measure-Command { cmake --build . -j | Out-Default } | Tee-Object -FilePath "$cu
 popd
 popd
 cat "$currentDirectory\$logfile"
+
