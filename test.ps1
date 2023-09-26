@@ -54,3 +54,5 @@ popd
 popd
 cat "$currentDirectory\$logfile"
 
+
+
